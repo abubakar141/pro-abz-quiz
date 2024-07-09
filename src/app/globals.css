@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+
+html, body {
+    overflow-x: hidden;
+    background-color: orange;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  h1, h2 {
+    color: #000925;
+    font-size: 50px;
+  }
+  
+  h3 {
+    padding-bottom: 2rem;
+    color: #000105;
+    font-size: 1.8rem;
+  }
+  
+  .container button {
+    padding: 16px 8px;
+    width: 30%;
+    margin-top: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: blue;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 15px;
+  }
+  .container button:hover{
+    background: rgb(1, 18, 169);
+    transition: 1.5s;
+  }
+  
+  .btn-disabled {
+    background-color: lightgray;
+  }
+  
+  li {
+    list-style-type: none;
+    cursor: pointer;
+    margin: 9px 0;
+    padding: 16px 8px;
+    color: #000105;
+    border: 1px solid lightgray;
+  }
+  
+  .li-hover:hover {
+    background-color: #d8d8d8;
+    columns: #fff;
+  }
+  
+  .li-selected {
+    color: #fff;
+    background-color: #000925;
+  }
+  
+  .container {
+    max-width: 740px;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    background-color: white;
+    border: solid black;
+    margin-top: 150px;
+    border-radius: 15px;
+  }
+  
+  .quiz-container {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+  }
+  
+  .container p {
+    padding: 8px 0;
+  }
+  .class a{
+    font-size: 50px;
+  }
+  
+  @layer styles {
+    .flexCol {
+      @apply flex-col;
+    }
+  }
+  .text{
+    margin: 4px;
+  }
+ 
+
+  
+  .sprinkles {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .sprinkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    animation: fall 2s infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -10px;
+      left: calc(50% + (var(--random) * 1px));
+    }
+    100% {
+      top: 100%;
+      left: calc(50% + (var(--random) * 1px));
+    }
+  }
+  
+  /* Additional sprinkle styles to add variation */
+  .sprinkle:nth-child(2) {
+    background-color: #00c3ff;
+    animation-duration: 3s;
+  }
+  
+  .sprinkle:nth-child(3) {
+    background-color: #ffa500;
+    animation-duration: 2.5s;
+  }
+  
+  /* Add more variations as needed */
+  
